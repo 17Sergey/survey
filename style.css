@@ -112,6 +112,7 @@ label {
 }
 .recomendation-item input[type="radio"]:checked {
     background-color: #000;
+    color: #000;
 }
 .recomendation-item {
     display: flex;
@@ -154,6 +155,7 @@ label {
 }
 .improve-item input:checked {
 background-color: #000;
+color: #000;
 }
 #suggestions {
     margin-top: 40px;
