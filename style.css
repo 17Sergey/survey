@@ -1,193 +1,138 @@
-:root {
-    --color-white: #f3f3f3;
-    --color-darkblue: #1b1b32;
-    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
-    --color-green: #37af65;
-  }
+html {
+    scroll-behavior: smooth;
+}
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
-body {
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   margin: 0;
-   color: var(--color-white);
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
 }
-body::before {
-    content: "";
+ul {
+    list-style-type: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+.navbar {
+    border-right: 3px solid hsl(228, 2%, 60%);
+    padding: 10px 0;
     position: fixed;
-    z-index: -1;
+    max-width: 290px;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    background: var(--color-darkblue);
-    background-image:  linear-gradient(
-        115deg,
-        rgba(58, 58, 158, 0.8),
-        rgba(136, 136, 206, 0.7)
-        ),
-        url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-.content__inner {
-    padding-bottom: 50px;
 }
 header {
-    text-align: center;
+    padding-left: 10px;
 }
-.title {
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+}
+.navbar ul li {
+    border-bottom: 1px solid black;
+}
+.navbar ul li:last-child {
+    border-bottom: none;
+}
+.main {
     font-size: 28px;
-    margin-top: 50px;
+    font-weight: 500;
+    color: black;
 }
-.subtitle {
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 25px;
+.navbar a {
+    padding: 10px;
+    color: hsl(228, 2%, 46%);
 }
-#survey {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: var(--color-darkblue-alpha);
-    border-radius: 5px;
-    padding: 30px;
+.content {
+    padding: 20px;
+    position: absolute;
+    margin-left: 310px;
 }
-input,
-button,
-select,
--webkit-select,
-textarea {
-    outline: none;
-    border: none;
-    font-size: 18px;
-    font-family: inherit;
+.content section p {
+    color: 	#696969;
+    margin: 20px 0 20px 15px;
 }
-label {
-    font-size: 20px;
-}
-#user-info {
-    display: flex;
-    flex-direction: column;
-}
-.info-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-.info-item:last-child {
-    margin-bottom: 0;
-}
-#user-info input,
-#user-info select,
-#user-info -webkit-select {
+.content section span {
+    display: block;
+    color: #000;
+    font-size: 30px;
     margin-top: 10px;
-    max-width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    padding: 10px;
-}
-#recomendation {
-    display: flex;
-    flex-direction: column;
-}
-#recomendation p {
-    font-size: 20px;
-}
-.recomendation-item input {
-    order: -1;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-.recomendation-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     margin-bottom: 10px;
 }
-.recomendation-item:last-child {
-    margin-bottom: 0;
+.content section ul {
+    list-style-type: disc;
+    margin: 15px 0 15px 70px;
+    color: 	#696969;
 }
-#feature {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+.content section ul li:not(:last-child) {
+    margin-bottom: 20px;
 }
-#feature select,
-#feature -webkit-select {
-    margin-top: 10px;
-    max-width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    padding: 10px;
+.content section ul li ul {
+    list-style-type: circle;
 }
-#improve {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+.content section code pre {
+    background-color: #f7f7f7;
+    white-space: pre-line;
+    padding: 15px;
+    margin: 15px 0;
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+    line-height: 2;
 }
-.improve-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
+.reference a {
+    text-decoration: underline;
+    color: blue;
 }
-.improve-item input {
-    order: -1;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-#suggestions {
-    margin-top: 40px;
-}
-.suggestions-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-.suggestions-item textarea {
-    margin-top: 20px;
-    resize: vertical;
-    align-self: stretch;
-    padding: 10px;
-}
-button[type="submit"] {
-    width: 100%;
-    background-color: var(--color-green);
-    color: var(--color-white);
-    padding: 10px;
-    text-align: center;
-}
-
-@media (max-width: 340px) {
-    .content__inner {
-        padding-bottom: 25px;
+@media (max-width: 860px) {
+    .navbar {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        margin: 0 15px;
+        padding: 0;
+        border-right: none;
     }
-    .title {
-        margin-top: 25px;
+    .navbar ul {
+        max-height: 300px;
+        overflow: auto;
+        border: 2px solid rgba(0, 0, 0, 0.7);
     }
-    label {
-        font-size: 18px;
+    .content {
+        margin-left: 0;
+        margin-top: 370px;
     }
-    input,
-    button,
-    select,
-    -webkit-select,
-    textarea {
-    font-size: 16px;
+    .main {
+        text-align: center;
+        margin-bottom: 15px;
     }
-    #suggestions {
-        margin-top: 20px;
+    .navbar ul li {
+        width: 100%;
+    }
+}
+@media (max-width: 385px) {
+    body {
+        font-size: 16px;
+    }
+    .content {
+        padding: 10px;
+    }
+    .content section p {
+        margin-left: 0;
+    }
+    .content section ul {
+        margin-left: 20px;
+    }
+    .content section code pre {
+        padding: 10px 0 10px 5px;
     }
 }
