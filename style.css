@@ -104,14 +104,15 @@ label {
     font-size: 20px;
 }
 .recomendation-item input[type="radio"] {
-    -webkit-appearance:none;
     order: -1;
     margin-right: 10px;
     width: 20px;
     height: 20px;
     background-color: #fff;
 }
-
+.recomendation-item input[type="radio"]:checked {
+    background-color: #000;
+}
 .recomendation-item {
     display: flex;
     flex-direction: row;
@@ -145,12 +146,14 @@ label {
     margin-bottom: 10px;
 }
 .improve-item input {
-    -webkit-appearance:none;
     order: -1;
     margin-right: 10px;
     width: 20px;
     height: 20px;
     background-color: #fff;
+}
+.improve-item input:checked {
+background-color: #000;
 }
 #suggestions {
     margin-top: 40px;
